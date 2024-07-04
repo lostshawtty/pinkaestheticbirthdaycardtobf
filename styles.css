@@ -1,0 +1,89 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe6f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    background-color: #fff;
+    border: 3px solid #ffcccc;
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.card h1 {
+    color: #ff66b2;
+    margin-bottom: 20px;
+}
+
+.card p {
+    color: #333;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.bear-gif {
+    width: 200px;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.card::before,
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    border: 5px solid #ff99cc;
+    border-radius: 15px;
+    pointer-events: none;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+}
+
+.card::before {
+    border-color: transparent transparent #ff99cc transparent;
+    border-width: 0 0 15px 15px;
+    border-radius: 0 0 15px 0;
+    top: -10px;
+    left: calc(50% - 10px);
+}
+
+.card::after {
+    border-color: #ff99cc transparent transparent transparent;
+    border-width: 15px 0 0 15px;
+    border-radius: 15px 0 0 0;
+    bottom: -10px;
+    left: calc(50% + 10px);
+}
+
+body::before {
+    content: '❤️';
+    font-size: 30px;
+    color: #ff66b2;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+body::after {
+    font-size: 30px;
+    color: #ff66b2;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
